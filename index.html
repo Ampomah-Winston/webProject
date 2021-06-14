@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/control.css">
+    <script src="https://kit.fontawesome.com/4efdf8f922.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="nav">      
+            <div>
+                <h2>Gladdery Shoppery </h2>            
+           </div> 
+           <div  style="margin-left: 80%;">
+                <h2> <i class="fa fa-shopping-cart "> </i> <i class="cartLength"></i> </h2>
+           </div>                    
+    </div>
+    <div class="container">
+        <div class="container-item left" style="display: none;">
+            <div class="slide-wrapper top-content-col">
+                <!-- <div class="slide-U" id="slide-D" style="border:1px solid red; padding:3px; cursor:pointer">Slide Up</div> -->
+                <div class="slider">
+                    <div class="imgHolder" id="slide-U">
+                        <img src="images/product1.png" alt="">
+                        <span id="pid" style="display: none;">1</span>
+                    </div>
+                    <div class="imgHolder">
+                        <img src="images/product3.png" alt="">
+                        <span id="pid" style="display: none;">2</span>
+                    </div>
+                    <div class="imgHolder">
+                        <img src="images/product2.png" alt="">
+                        <span id="pid" style="display: none;">3</span>
+                    </div>
+                    <div class="imgHolder">
+                        <img src="images/product1.png" alt="">
+                        <span id="pid" style="display: none;">4</span>
+                    </div>
+                </div>
+                <!-- <button class="slide-D" id="slide-D">Slide Down</button> -->
+            </div>
+          
+        </div>
+        <div class="container-item center">
+            <div class="preview">
+                <div class="preview-left">
+                    <div class="preview-thumb-imgHolder">
+                        <img src="images/product1.png" alt="">
+                        <span id="pid" style="display: none;">1</span>
+                    </div>
+                    <div class="preview-thumb-imgHolder">
+                        <img src="images/product3.png" alt="">
+                        <span id="pid" style="display: none;">2</span>
+                    </div>
+                    <div class="preview-thumb-imgHolder">
+                        <img src="images/product2.png" alt="">
+                        <span id="pid" style="display: none;">3</span>
+                    </div>
+                </div>
+                <img class="preview-main-img" src="images/product2.png" alt="">
+                <h1 class="addCart" style="position: absolute;margin: auto;">
+                    +</h1>
+                    <span class="product-id" style="display: none;">1</span>
+
+                <div class="preview-detail">
+                    <h3>Super Ananse Suit</h3>
+                    <p>* * * * *</p>                   
+                    <p>Made from Northern Ghana Leather</p>
+                </div>
+
+                <div class="preview-price">
+                    <h3>₵1000</h3>
+                </div>
+            </div>
+        </div>
+       
+        <div class="outside top-content-col" style="display: none;">
+            <div class="center-content" 
+                style="background-color: #56c5ad; width: 100%;margin-top: 5px;">
+                <h3 style="margin-left: 10px;">Cart Options</h3> 
+                <h2 class="close-btn">x</h2>                              
+            </div>
+            <div style="height: 50%; width: 100%;  margin-top: 5px;">
+                <div class="top-content-col right-label">
+                    <p>Quantity</p>
+                </div>
+                <div class="center-content right-detail">
+                    <input class="ranger" type="range" value="1" min="1" max="20"
+                        style="width: 120px; text-align: center;height: 15px;">
+                    <p class="taggie" style="width: 30px; text-align: center; font-size: 30px;font-weight: bolder; color: darkcyan; margin-left:5px">
+                        1</p>
+                </div>
+                <div class="top-content-col right-label">
+                    <p>Size</p>
+                </div>
+                <div class="center-content right-detail">
+                    <div class="sizn">
+                        <label for="size-sm">SM</label>
+                        <input class="size" type="radio" name="size" id="size-sm" checked = true>
+                    </div>
+                    <div class="sizn">
+                        <label for="size-mm">MM</label>
+                        <input class="size" type="radio" name="size" id="size-mm">
+                    </div>
+                    <div class="sizn">
+                        <label for="size-l">L</label>
+                        <input class="size" type="radio" name="size" id="size-l">
+                    </div>                   
+                </div>  
+                <div class="top-content-col right-label">
+                    <p>Color</p>
+                </div>
+                <div class="center-content right-detail">
+                    <div class="colorn">
+                        <label for="color1">Purple</label>
+                        <input type="radio" name="color" id="color1" checked = true>
+                    </div>
+                    <div class="colorn">
+                        <label for="color2">Orange</label>
+                        <input type="radio" name="color" id="color2">
+                    </div>
+                    <div class="colorn">
+                        <label for="color3">Gray</label>
+                        <input type="radio" name="color" id="color3">
+                    </div>                   
+                </div>    
+                <div class="center-content-col right-detail" >
+                    <i class="center-content-col cartIn"> + cart </i>
+                </div>            
+            </div>
+        </div>
+    </div>
+
+    <div class="cartItems-checkOut">
+        <!-- <p>this is winston the super awesome guy</p> -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="js/slideNcart.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('.ranger').on("change", function () { 
+               $('.taggie')[0].innerHTML = $('.ranger')[0].value;
+                console.log( $('.ranger')[0].value)
+            })
+            $('.left').fadeIn(1000);
+            $('.slide-wrapper').fadeIn(2000);
+            $('.slider').fadeIn(2000);
+            $('.center').fadeIn(1000);
+        });
+
+        $(".imgHolder img").click(function () {
+            $('.right-content').fadeIn(700);
+            close_anim($(this));
+            open_anim();
+        });
+
+        $('.addCart').on("click", function () {
+            $('.outside').slideDown(700)
+        })
+
+        $('.close-btn').click(() => {
+            $('.outside').slideUp(1000)
+        })
+
+        $('.preview-main-img').on("mouseenter", () => {
+            $('.preview h1').animate({ opacity: 1 })
+        })
+
+        $('.preview h1').on("mouseenter", () => {
+            $('.preview h1').animate({ opacity: 1 },0)
+        })
+
+        $('.preview-main-img').on("mouseout", () => {
+            $('.preview h1').animate({ opacity: 0 },70)
+        })
+
+        $('.preview h1').on("mouseout", () => {
+            $('.preview h1').animate({ opacity: 0 },70)
+        })
+
+        function close_anim(thumbNail_img) {
+            $('.preview-main-img').animate({
+                opacity: 0
+            }, 400, "swing", () => {
+                getThumbImg(thumbNail_img)
+            })
+        }
+
+        function open_anim(thumbNail_img) {
+            $('.preview-main-img').animate({
+                opacity: 1
+            }, 300, "swing")
+        }
+
+        function getThumbImg(thumbNail_img) {
+            let preview = $('.preview-main-img');
+            preview[0].src = thumbNail_img[0].src;
+        }
+    </script>
+</body>
+
+</html>

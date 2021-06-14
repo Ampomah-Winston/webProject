@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Indie Flower', cursive;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+.nav{
+	width: 100%;
+	height: 180px;
+	background-color: #808080;
+	margin-bottom: 10px;
+}
+
+.container{
+	position: relative;
+	height: 570px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	/* background-color: #56c5ad; */
+	margin: auto;
+	/* display: none; */
+	transition: 1s;
+}
+
+/* .container-item{
+	background-color: #f1f1f1;	
+} */
+
+.left{
+	width: 10%;
+	height: 500px;
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	align-items: center;
+	justify-content: top;
+	flex-direction: column;
+	box-shadow: 3px 3px 5px gray;
+	margin: 10px;
+}
+
+.left .slide-wrapper{	
+	width: 90%;
+	height: 100%;
+	background-color: white;
+	margin: 4px;
+	box-shadow: 3px 3px 5px #808080;
+	border-radius: 10px;
+	/* overflow-y: hidden; */
+}
+
+.left .slider{	
+	height: 100%;
+	overflow-y: hidden;
+}
+
+.imgHolder > img{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	border-radius: 10px;
+}
+
+.imgHolder > img:hover{
+	cursor: pointer;
+	/* transform: rotateY('30deg') */
+	transition: 0.7s;
+	transform: rotateY(180deg);
+}
+
+.center{
+	margin: 10px;	
+	width: 40%;
+	height: 550px;
+	display: none;
+}
+
+.preview{
+	width: 100%;
+	height: 500px;
+	background-color: white;
+	box-shadow: 3px 3px 5px gray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.preview-left{
+	position: absolute;
+	height: 30%;
+	width: 10%;
+	left: 5%;
+	top: 5%;
+}
+
+.preview-thumb-imgHolder > img{
+	height: 50%;
+	width: 100%;
+	margin: auto;
+	border-radius: 5px;
+	border:1px solid white;
+	cursor: pointer;
+}
+
+.preview-detail{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	color: #808080;
+	width: 170px;
+	mix-blend-mode: difference;
+}
+
+.preview-price{
+	position: absolute;
+	top:5%;
+	right: 5%;
+	color: gray;
+	mix-blend-mode: difference;
+}
+
+.preview > img{
+	margin: auto;
+	width: 95%;
+	height: 95%;
+	box-shadow: 2px 3px 4px gray;	
+	border-radius: 15px;
+}
+
+.preview >  h1{
+	position:absolute;
+	background-color: transparent;
+	padding: 10px;
+	border:2px solid gray;
+	color: orangered;
+	width: 15%;
+	border-radius: 20px;
+	text-align: center;	
+	cursor: pointer;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.preview >  h1:hover{
+	transition: 0.5s;
+	opacity: 1;
+}
+
+.preview >  h1:active{
+	color: white;
+	background-color: orangered;
+}
+
+.right{
+	display: none;
+	width: 20%;
+	height: 500px;
+	margin: 10px;	
+}
+
+.right-label{
+    width: 100%;
+    height: 20px;
+    background-color: darkcyan;
+	font-weight: bold;
+	padding: 1px;
+	display: none;
+}
+
+.right-detail{
+	display: none;
+    width: 100%;
+    height: 50px;
+    background-color: #56c5ad;
+}
+
+.right-detail > .size{
+   margin: 2px;
+   background-color: darkcyan;
+   padding: 2px;
+}
+
+.cartIn{
+	width: 100%; 
+	height: 100%; 
+    background-color: rgb(35, 156, 150);; 
+    cursor: pointer; 
+}
+
+.cartIn:active{
+	background-color: rgba(32, 196, 141);
+}
+
+.sizn{
+	margin: 5px;
+	padding: 3px;
+	border:1.5px solid darkcyan;
+}
+
+.colorn{
+	margin: 5px;
+	padding: 3px;
+	border:1.5px solid darkcyan;
+}
+
+input [type = radio]:checked{
+	background-color: coral;
+}
+
+.outside{
+	margin-top: 10px;
+	height: 470px; 
+	width: 290px; 
+	position: absolute;
+	right: 1%;
+	display: none;
+	box-shadow: 2px 3px 4px gray;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 600px) {
+	.container{
+	  flex-direction: column;
+	}
+	.left{
+		margin-top: 250px;
+		width: 20%;
+		flex-direction: row;
+	}
+
+	.imgHolder > img{
+		height: 30px;
+		width: 30px;
+	}
+
+	.center{
+		width: 90%;
+	}
+
+	.right{
+		flex-direction: row;
+	}
+  }

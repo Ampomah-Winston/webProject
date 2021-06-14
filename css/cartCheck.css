@@ -1,0 +1,16 @@
+ *{
+     background-color: black;
+ }
+
+ img{
+	height: 100px;
+	width: 120px;
+	border-radius: 5px;
+	border:1px solid white;
+	/* cursor: pointer; */
+}
+
+.preview-thumb-imgHolder{
+    padding: 5px;
+    border: 2px solid lightgreen;
+}
